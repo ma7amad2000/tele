@@ -30,7 +30,7 @@ from .logger import logging
 LOGS = logging.getLogger(__name__)
 
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
-CATLOGO = "https://telegra.ph/file/61536e1bc997216d4fe88.jpg"
+CATLOGO = "https://telegra.ph/file/89e5316364eeb1e17e554.jpg"
 tr = Config.COMMAND_HAND_LER
 
 
@@ -53,7 +53,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"**▾∮ مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧ•  𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 •ⵧⵧⵧⵧⵧ⍣**\n[ѕᴏᴜʀᴄᴇ ᴄᴀʟɪᴘʜ](https://t.me/HL_BG)\n\n"
+    text = f"**▾∮ مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧ• 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 •ⵧⵧⵧⵧⵧ⍣**\n[𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)\n\n"
     buttons = [
         (Button.inline("معلومات الملفات 🗂", data="check"),),
         (
@@ -229,7 +229,7 @@ async def inline_handler(event):
             buttons = [
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("DEV", "https://t.me/BP_BP"),
+                    Button.url("DEV", "https://t.me/HL_BG"),
                 )
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -422,7 +422,7 @@ async def inline_handler(event):
             _result = main_menu()
             result = builder.article(
                 title="sbb_b Help™",
-                description="**▾∮ قائمة التعليمات الخاصة ب حياه **",
+                description="**▾∮ قائمة التعليمات الخاصة ب حيــاه **",
                 text=_result[0],
                 buttons=_result[1],
                 link_preview=False,
@@ -561,7 +561,7 @@ async def inline_handler(event):
                 Button.url("قناة السورس", "t.me/HL_BG"),
                 Button.url(
                     "المطور",
-                    "t.me/BP_BP",
+                    "t.me/bp_bp",
                 ),
             )
         ]
@@ -570,14 +570,14 @@ async def inline_handler(event):
             url=CATLOGO, size=0, mime_type="image/jpeg", attributes=[]
         )
         text, msg_entities = await event.client._parse_message_text(
-            "لجعل الخليفه من نصيبك!", "md"
+            "لجعل حيــاه من نصيبك!", "md"
         )
         result = types.InputBotInlineResult(
             id=str(uuid4()),
             type="photo",
-            title="[ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)",
+            title="[𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)",
             description="لتنصيبه لك",
-            url="t.me/BP_BP",
+            url="t.me/bp_bp",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
