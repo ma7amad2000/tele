@@ -53,7 +53,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"**▾∮ مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧ• 𝗖𝗔𝗟𝗜𝗣𝗛 •ⵧⵧⵧⵧⵧ⍣**\n[ѕᴏᴜʀᴄᴇ ᴄᴀʟɪᴘʜ](https://t.me/ZZZ7iZ)\n\n"
+    text = f"**▾∮ مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧ•  𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 •ⵧⵧⵧⵧⵧ⍣**\n[ѕᴏᴜʀᴄᴇ ᴄᴀʟɪᴘʜ](https://t.me/HL_BG)\n\n"
     buttons = [
         (Button.inline("معلومات الملفات 🗂", data="check"),),
         (
@@ -229,7 +229,7 @@ async def inline_handler(event):
             buttons = [
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("DEV", "https://t.me/ZZZ7iZ"),
+                    Button.url("DEV", "https://t.me/BP_BP"),
                 )
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -422,7 +422,7 @@ async def inline_handler(event):
             _result = main_menu()
             result = builder.article(
                 title="sbb_b Help™",
-                description="**▾∮ قائمة التعليمات الخاصة ب الخليفه **",
+                description="**▾∮ قائمة التعليمات الخاصة ب حياه **",
                 text=_result[0],
                 buttons=_result[1],
                 link_preview=False,
@@ -558,10 +558,10 @@ async def inline_handler(event):
     else:
         buttons = [
             (
-                Button.url("قناة السورس", "t.me/ZZZ7iZ"),
+                Button.url("قناة السورس", "t.me/HL_BG"),
                 Button.url(
                     "المطور",
-                    "t.me/H_M_Dr",
+                    "t.me/BP_BP",
                 ),
             )
         ]
@@ -575,9 +575,9 @@ async def inline_handler(event):
         result = types.InputBotInlineResult(
             id=str(uuid4()),
             type="photo",
-            title="[ѕᴏᴜʀᴄᴇ ᴄᴀʟɪᴘʜ](https://t.me/ZZZ7iZ)",
+            title="[ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)",
             description="لتنصيبه لك",
-            url="t.me/ZZZ7iZ",
+            url="t.me/BP_BP",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
