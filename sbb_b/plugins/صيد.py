@@ -1,5 +1,6 @@
 # by: t.me/Dar4k  ~ t.me/R0R77
 # ported to ZThon
+
 import random
 
 import requests
@@ -7,7 +8,8 @@ import telethon
 from telethon.sync import functions
 from user_agent import generate_user_agent
 
-from zthon import zedub
+from sbb_b import sbb_b
+
 
 a = "qwertyuiopassdfghjklzxcvbnm"
 b = "1234567890"
