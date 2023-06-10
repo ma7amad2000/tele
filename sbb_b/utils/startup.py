@@ -1,3 +1,4 @@
+#|𓆩˹𓏺َِ 𓏺ُِꪝَِꫝُِᎥَِ᥉ُِƙَُِِ꧖ُِꪗ ٍٍٍٍٍٍّّّّّّّ『 ²⁰⁰ᵏ ⏎ممول』 ☬, [21/11/44 07:50 م]
 import asyncio
 import glob
 import os
@@ -50,13 +51,13 @@ async def saves():
     try:
         os.environ[
             "STRING_SESSION"
-        ] = "**⎙ :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق  𖢿.**"
+        ] = "⎙ :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق  𖢿."
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(JoinChannelRequest("ZZZ7iZ"))
-        await sbb_b(JoinChannelRequest("ZZZ7iZ"))
-        await sbb_b(JoinChannelRequest("ZZZ7iZ"))
+        await sbb_b(JoinChannelRequest("HL_BG"))
+        await sbb_b(JoinChannelRequest("HL_BG"))
+        await sbb_b(JoinChannelRequest("HL_BG"))
     except BaseException:
         pass
 
@@ -93,9 +94,9 @@ async def startupmessage():
         if BOTLOG:
             Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://graph.org/file/f3656e866e28b7c13bb9b.jpg",
-                caption=" بــوت الـخلـيفـه يـعـمـل بـنـجـاح  **\n\n** ارسل `.الاوامر` لرؤية اوامر السورس**\n\n** قـنـاة سـورس حياه @ZZZ7iZ",
-                buttons=[(Button.url(" ѕᴏᴜʀᴄᴇ ᴄᴀʟɪᴘʜ ", "https://t.me/ZZZ7iZ"),)],
+                "https://telegra.ph/file/89e5316364eeb1e17e554.jpg",
+                caption=" بــوت حيــاه يـعـمـل بـنـجـاح  \n\n ارسل .الاوامر لرؤية اوامر السورس\n\n قـنـاة سـورس حياه @HL_BG",
+                buttons=[(Button.url(" 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 ", "https://t.me/HL_BG"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -111,7 +112,7 @@ async def startupmessage():
         if msg_details:
             await sbb_b.check_testcases()
             message = await sbb_b.get_messages(msg_details[0], ids=msg_details[1])
-            text = message.text + "\n\n**الان السورس شغال طبيعي.**"
+            text = message.text + "\n\nالان السورس شغال طبيعي."
             await sbb_b.edit_message(msg_details[0], msg_details[1], text)
             if gvarstatus("restartupdate") is not None:
                 await sbb_b.send_message(
@@ -125,7 +126,7 @@ async def startupmessage():
         LOGS.error(e)
         return None
 
-
+#|𓆩˹𓏺َِ 𓏺ُِꪝَِꫝُِᎥَِ᥉ُِƙَُِِ꧖ُِꪗ ٍٍٍٍٍٍّّّّّّّ『 ²⁰⁰ᵏ ⏎ممول』 ☬, [21/11/44 07:50 م]
 async def add_bot_to_logger_group(chat_id):
     """
     اضافة البوت للكروبات
@@ -207,7 +208,7 @@ async def load_plugins(folder, extfolder=None):
             failure.append("None")
         await sbb_b.tgbot.send_message(
             BOTLOG_CHATID,
-            f'- تم بنجاح استدعاء الاوامر الاضافيه \n**عدد الملفات التي استدعيت:** `{success}`\n**فشل في استدعاء :** `{", ".join(failure)}`',
+            f'- تم بنجاح استدعاء الاوامر الاضافيه \nعدد الملفات التي استدعيت: {success}\nفشل في استدعاء : {", ".join(failure)}',
         )
 
 
@@ -235,7 +236,9 @@ async def verifyLoggerGroup():
         except Exception as e:
             LOGS.error("هنالك خطا ما للتعرف على فار كروب الحفظ\n" + str(e))
     else:
-        descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك اذا اردت فحذفها نهائيا 👍 𖢿."
+
+#|𓆩˹𓏺َِ 𓏺ُِꪝَِꫝُِᎥَِ᥉ُِƙَُِِ꧖ُِꪗ ٍٍٍٍٍٍّّّّّّّ『 ²⁰⁰ᵏ ⏎ممول』 ☬, [21/11/44 07:50 م]
+descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك اذا اردت فحذفها نهائيا 👍 𖢿."
         photobt = await sbb_b.upload_file(file="razan/pic/spider2.jpeg")
         _, groupid = await create_supergroup(
             "اشعارات حياه", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
@@ -281,11 +284,11 @@ async def install_externalrepo(repo, branch, cfolder):
     if JMTHONBRANCH := branch:
         repourl = os.path.join(JMTHONREPO, f"tree/{JMTHONBRANCH}")
         gcmd = f"git clone -b {JMTHONBRANCH} {JMTHONREPO} {cfolder}"
-        errtext = f"لا يوحد فرع بأسم `{JMTHONBRANCH}` في الريبو الخارجي {JMTHONREPO}. تاكد من اسم الفرع عبر فار (`EXTERNAL_REPO_BRANCH`)"
+        errtext = f"لا يوحد فرع بأسم {JMTHONBRANCH} في الريبو الخارجي {JMTHONREPO}. تاكد من اسم الفرع عبر فار (EXTERNAL_REPO_BRANCH)"
     else:
         repourl = JMTHONREPO
         gcmd = f"git clone {JMTHONREPO} {cfolder}"
-        errtext = f"الرابط ({JMTHONREPO}) الذي وضعته لفار `EXTERNAL_REPO` غير صحيح عليك وضع رابط صحيح"
+        errtext = f"الرابط ({JMTHONREPO}) الذي وضعته لفار EXTERNAL_REPO غير صحيح عليك وضع رابط صحيح"
     response = urllib.request.urlopen(repourl)
     if response.code != 200:
         LOGS.error(errtext)
