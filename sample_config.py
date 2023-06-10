@@ -72,7 +72,7 @@ class Config(object):
     TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "jmthon")
     # هنا خلفيه مال تلجراف او بعض الاوامر
     THUMB_IMAGE = os.environ.get(
-        "THUMB_IMAGE", "https://graph.org/file/524d0431f17854870e678.jpg"
+        "THUMB_IMAGE", "https://telegra.ph/file/89e5316364eeb1e17e554.jpg"
     )
     # هنا اسم الملف الي ما تريده يتثبت عندك
     NO_LOAD = list(os.environ.get("NO_LOAD", "").split())
