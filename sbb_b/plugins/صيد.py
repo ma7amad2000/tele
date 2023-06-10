@@ -1,5 +1,5 @@
-#تثبيت`t.me/Dar4k  ~ t.me/R0R77
-
+# by: t.me/Dar4k  ~ t.me/R0R77
+# ported to ZThon
 import random
 
 import requests
@@ -7,13 +7,13 @@ import telethon
 from telethon.sync import functions
 from user_agent import generate_user_agent
 
-from sbb_b import sbb_b
+from zthon import zedub
 
 a = "qwertyuiopassdfghjklzxcvbnm"
 b = "1234567890"
 e = "qwertyuiopassdfghjklzxcvbnm1234567890"
 
-trys, trys2, trys3 = [0], [0], [0]
+trys, trys2 = [0], [0]
 isclaim = ["off"]
 isauto = ["off"]
 
@@ -40,7 +40,7 @@ def check_user(username):
 
 
 def gen_user(choice):
-    if choice == "ثلاثي":
+    if choice == "ثلاثيات":
         c = random.choices(a)
         d = random.choices(b)
         s = random.choices(e)
@@ -61,7 +61,7 @@ def gen_user(choice):
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "سداسي":
+    elif choice == "سداسيات":
         c = d = random.choices(a)
         d = random.choices(e)
         f = [c[0], c[0], c[0], c[0], c[0], d[0]]
@@ -75,14 +75,14 @@ def gen_user(choice):
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "سباعي":
+    elif choice == "سباعيات":
         c = d = random.choices(a)
         d = random.choices(b)
         f = [c[0], c[0], c[0], c[0], d[0], c[0], c[0]]
         random.shuffle(f)
         username = "".join(f)
 
-    elif choice == "بوت":
+    elif choice == "بوتات":
         c = random.choices(a)
         d = random.choices(e)
         s = random.choices(e)
@@ -101,107 +101,47 @@ def gen_user(choice):
     return username
 
 
-@sbb_b.ar_cmd(pattern="2الصيد")
-async def _(event):
-    await event.edit(
-        """
-** هذه هي قائـمه الصيد الاصدار الثاني الخاصه بسورس الخليفه : **
-
-ٴ— — — — — — — — — —
-
-** الانـواع : ( `ثلاثي` ) - ( `خماسي` ) - ( `سداسي` ) - ( `بوت` ) - ( `سباعي` )**
-
-** ارسل : `سحب` + الـنوع **
-** الشـرح : يـقوم بصـيد معـرفات حـسب النـوع **
-
-** الامـر :  `تثبيت` + معرف **
-** وظيفة الامـر : يقوم بالتثبيت على المعرف عندما يصبح متاح يأخذه **
-
- — — — — — — — — — — 
-** الامـر:   `.الحاله` **
-** • لمعرفة عدد المحاولات للصيد **
-
- — — — — — — — — — — 
-** الامـر:  `.تثبيت` **
-** • لمعرفة عدد المحاولات للسحب **
-
-@ZZZ7iZ  - **Source Al-Khalif **
-
-"""
-    )
+ZelzalChecler_cmd = (
+    "𓆩 [𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝗭𝗧𝗵𝗼𝗻𝙃𝘼𝙔𝘼 - اوامـر الصيـد والتشيكـر](t.me/HL_BG) 𓆪\n\n"
+    "**✾╎قـائمـة اوامـر تشيكـر صيـد معـرفات تيليجـرام :** \n\n"
+    "**- النـوع :**\n"
+    "**(** `سداسي حرفين`/`ثلاثيات`/`سداسيات`/`بوتات`/`خماسي حرفين`/`خماسي`/`سباعيات` **)**\n\n"
+    "`.صيد` + النـوع\n"
+    "**⪼ لـ صيـد يـوزرات عشوائيـه على حسب النـوع**\n\n"
+    "`.تثبيت` + اليوزر\n"
+    "**⪼ لـ تثبيت اليـوزر بقنـاة معينـه اذا اصبح متاحـاً يتم اخـذه**\n\n"
+    "`.حالة الصيد`\n"
+    "**⪼ لـ معرفـة حالـة تقـدم عمليـة الصيـد**\n\n"
+    "`.حالة التثبيت`\n"
+    "**⪼ لـ معرفـة حالـة تقـدم التثبيت التلقـائـي**\n\n"
+    "`.ايقاف الصيد`\n"
+    "**⪼ لـ إيقـاف عمليـة الصيـد الجاريـه**\n\n"
+    "`.ايقاف التثبيت`\n"
+    "**⪼ لـ إيقـاف عمليـة التثبيت التلقـائـي**\n\n"
+)
 
 
-@sbb_b.ar_cmd(pattern="سحب بوت")
-async def huntbot(event):
-    await event.edit(f"- بدء السحب الان")
-    isclaim.clear()
-    isclaim.append("on")
-    botmod = True
-    while botmod:
-        username = gen_user("بوت")
-        isav = check_user(username)
-        if isav == True:
-            try:
-                await sbb_b.send_message("@botfather", "/newbot")
-                await sbb_b.send_message("@botfather", "@ZZZ7iZ - @H_M_Dr 🐊")
-                await sbb_b.send_message("@botfather", username)
-                await event.client.send_file(
-                    event.chat_id,
-                    "https://t.me/JZIXl/109",
-                    caption="🐊 Khalifa The best  🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف : ❲ @{} ❳\n- اضغط: ❲ {} ❳\n-  تم حفظ : ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
-                        username, trys3
-                    ),
-                )
-                await event.client.send_message(
-                    "@H_M_Dr", f"-  انتـهى  : @{username} !\n- By : @ZZZ7iZ - @H_M_Dr !"
-                )
-                botmod = False
-                break
-            except telethon.errors.rpcerrorlist.UsernameInvalidError:
-                pass
-            except telethon.errors.FloodError as e:
-                await sbb_b.send_message(
-                    event.chat_id,
-                    f"للاسف تبندت , مدة الباند-  ({e.seconds}) ثانية .",
-                )
-                botmod = False
-                break
-            except Exception as eee:
-                if "the username is already" in str(eee):
-                    pass
-                if "USERNAME_PURCHASE_AVAILABLE" in str(eee):
-                    pass
-                else:
-                    await sbb_b.send_message(
-                        event.chat_id,
-                        f"""- فشل مع @{username} , الخطأ :{str(eee)}""",
-                    )
-                    botmod = False
-                    break
-        else:
-            pass
-        trys3[0] += 1
-    isclaim.clear()
-    isclaim.append("off")
+@zedub.zed_cmd(pattern="الصيد")
+async def cmd(zelzallll):
+    await edit_or_reply(zelzallll, ZelzalChecler_cmd)
 
 
-@sbb_b.ar_cmd(pattern="سحب (.*)")
+@zedub.zed_cmd(pattern="صيد (.*)")
 async def hunterusername(event):
-    if event.text[1:].startswith("سحب بوت"):
-        return
     choice = str(event.pattern_match.group(1))
-    await event.edit(f"- بدء السحب الان")
+    await event.edit(f"**⎉╎تم بـدء الصيـد .. بنجـاح ☑️**\n**⎉╎لمعرفـة حالة تقـدم عمليـة الصيـد ارسـل (**`.حالة الصيد`**)**")
+
     try:
-        ch = await sbb_b(
+        ch = await zedub(
             functions.channels.CreateChannelRequest(
-                title="- صـيد الخليفه ",
-                about="تم انشاء هذه القناة لصيد المعرفات بواسطة : - @ZZZ7iZ ",
+                title="⎉ صيـد حيــاه 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 ⎉",
+                about="This channel to hunt username by - @HL_BG ",
             )
         )
         ch = ch.updates[1].channel_id
     except Exception as e:
-        await sbb_b.send_message(
-            event.chat_id, f"فشل في انشاء القناة : {str(e)}"
+        await zedub.send_message(
+            event.chat_id, f"خطأ في انشاء القناة , الخطأ**-  : {str(e)}**"
         )
         sedmod = False
 
@@ -211,32 +151,30 @@ async def hunterusername(event):
     while sedmod:
         username = gen_user(choice)
         if username == "error":
-            await event.edit("- يرجى وضع النوع بشكل صحيح")
+            await event.edit("**- يـرجى وضـع النـوع بشكـل صحيـح ...!!**")
             break
         isav = check_user(username)
         if isav == True:
             try:
-                await sbb_b(
+                await zedub(
                     functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username
                     )
                 )
-                await event.client.send_file(
+                await event.client.send_message(
                     event.chat_id,
-                    "https://t.me/JZIXl/109",
-                    caption="🏆 Khalifa The best 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف : ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
-                        username, trys, choice
-                    ),
-                )
-                await event.client.send_file(
-                    ch,
-                    "https://t.me/JZIXl/109",
-                    caption="🏆 Khalifa The best 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
+                    "ᯓ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 - صيـد حيــاه 💡\n**•────────────────────•**\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Channel ❳\n**•────────────────────•**\n- By ❲ @HL_BG ❳ ".format(
                         username, trys, choice
                     ),
                 )
                 await event.client.send_message(
-                    "@H_M_Dr", f"-  انتـهى  : @{username} !\n- By : @ZZZ7iZ - @H_M_Dr !"
+                    ch,
+                    "ᯓ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 - صيـد حيــاه 💡\n**•────────────────────•**\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Channel ❳\n**•────────────────────•**\n- By ❲ @HL_BG ❳ ".format(
+                        username, trys, choice
+                    ),
+                )
+                await event.client.send_message(
+                    "@zzzzl1l", f"- Done : @{username} !\n- By : @HL_BG"
                 )
                 sedmod = False
                 break
@@ -246,9 +184,9 @@ async def hunterusername(event):
                 if "(caused by UpdateUsernameRequest)" in str(baned):
                     pass
             except telethon.errors.FloodError as e:
-                await sbb_b.send_message(
+                await zedub.send_message(
                     event.chat_id,
-                    f"للاسف تبندت , مدة الباند-  ({e.seconds}) ثانية .",
+                    f"للاسف تبندت , مدة الباند**-  ({e.seconds}) ثانية .**",
                 )
                 sedmod = False
                 break
@@ -258,9 +196,9 @@ async def hunterusername(event):
                 if "USERNAME_PURCHASE_AVAILABLE" in str(eee):
                     pass
                 else:
-                    await sbb_b.send_message(
+                    await zedub.send_message(
                         event.chat_id,
-                        f"""- فشل مع @{username} , الخطا :{str(eee)}""",
+                        f"""- خطأ مع @{username} , الخطأ :{str(eee)}""",
                     )
                     sedmod = False
                     break
@@ -271,26 +209,26 @@ async def hunterusername(event):
     isclaim.append("off")
 
 
-@sbb_b.ar_cmd(pattern="تثبيت (.*)")
+@zedub.zed_cmd(pattern="تثبيت (.*)")
 async def _(event):
     msg = event.text.split()
     try:
         ch = str(msg[2])
         ch = ch.replace("@", "")
-        await event.edit(f" حسناً سيتم بدء التثبيت في :: @{ch} .")
+        await event.edit(f"حسناً سيتم بدء التثبيت في**-  @{ch} .**")
     except:
         try:
-            ch = await sbb_b(
+            ch = await zedub(
                 functions.channels.CreateChannelRequest(
-                    title="- صـيد الخليفه",
-                    about="- تم انشاء هذه القناة لصيد المعرفات بواسطة @ZZZ7iZ ",
+                    title="تثبيت حيــاه 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼",
+                    about="This channel to hunt username by - @HL_BG ",
                 )
             )
             ch = ch.updates[1].channel_id
-            await event.edit(f"- تم بنجاح بدأ التثبيت")
+            await event.edit(f"**- تم بـدء التثبيت .. بنجـاح ☑️**")
         except Exception as e:
-            await sbb_b.send_message(
-                event.chat_id, f"** فشل في انشاء القناة : {str(e)}"
+            await zedub.send_message(
+                event.chat_id, f"خطأ في انشاء القناة , الخطأ : {str(e)}"
             )
     isauto.clear()
     isauto.append("on")
@@ -301,47 +239,45 @@ async def _(event):
         isav = check_user(username)
         if isav == True:
             try:
-                await sbb_b(
+                await zedub(
                     functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username
                     )
                 )
-                await event.client.send_file(
+                await event.client.send_message(
                     ch,
-                    "https://t.me/JZIXl/109",
-                    caption="🏆 Khalifa The best 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف : ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
-                        username, trys2
-                    ),
-                )
-                await event.client.send_file(
-                    event.chat_id,
-                    "https://t.me/JZIXl/109",
-                    caption="🏆 Khalifa The best 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n- * المعرف **: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
+                    "ᯓ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 - صيـد حيــاه 💡\n**•────────────────────•**\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Channel ❳\n**•────────────────────•**\n- By ❲ @HL_BG ❳ ".format(
                         username, trys2
                     ),
                 )
                 await event.client.send_message(
-                    "@H_M_Dr",
-                    f"- منتهي : @{username} !\n- By : @ZZZ7iZ - @H_M_Dr !\n-  سجل السحب  {trys2}",
+                    event.chat_id,
+                    "ᯓ 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 - صيـد حيــاه 💡\n**•────────────────────•**\n- UserName: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Channel ❳\n**•────────────────────•**\n- By ❲ @HL_BG ❳ ".format(
+                        username, trys2
+                    ),
+                )
+                await event.client.send_message(
+                    "@zzzzl1l",
+                    f"- Done : @{username} !\n- By : @HL_BG !\n- Hunting Log {trys2}",
                 )
                 swapmod = False
                 break
             except telethon.errors.rpcerrorlist.UsernameInvalidError:
                 await event.client.send_message(
-                    event.chat_id, f"المعرف : @{username} غير صالح "
+                    event.chat_id, f"**المعرف @{username} غير صالح ؟!**"
                 )
                 swapmod = False
                 break
             except telethon.errors.FloodError as e:
-                await sbb_b.send_message(
-                    event.chat_id, f"للاسف تبندت : مدة الباند ({e.seconds}) ثانية "
+                await zedub.send_message(
+                    event.chat_id, f"للاسف تبندت , مدة الباند ({e.seconds}) ثانية ."
                 )
                 swapmod = False
                 break
             except Exception as eee:
-                await sbb_b.send_message(
+                await zedub.send_message(
                     event.chat_id,
-                    f"""فشل مع {username} ، الخطأ :{str(eee)}""",
+                    f"""خطأ مع {username} , الخطأ :{str(eee)}""",
                 )
                 swapmod = False
                 break
@@ -353,21 +289,65 @@ async def _(event):
     isclaim.append("off")
 
 
-@sbb_b.ar_cmd(pattern="الحاله")
+@zedub.zed_cmd(pattern="حالة الصيد")
 async def _(event):
     if "on" in isclaim:
-        await event.edit(f"- السحب وصل لـ({trys[0]}) من المحاولات")
+        await event.edit(f"**- الصيد وصل لـ({trys[0]}) من المحـاولات**")
     elif "off" in isclaim:
-        await event.edit("- السحب بالاصل لا يعمل .")
+        await event.edit("**- لا توجد عمليـة صيد جاريـه حاليـاً ؟!**")
     else:
-        await event.edit("- لقد حدث خطأ ما وتوقف الامر لديك")
+        await event.edit("**- لقد حدث خطأ ما وتوقف الامر لديك**")
 
 
-@sbb_b.ar_cmd(pattern="تثبيت")
+@zedub.zed_cmd(pattern="حالة التثبيت")
 async def _(event):
     if "on" in isauto:
-        await event.edit(f"- التثبيت وصل لـ({trys2[0]}) من المحاولات")
+        await event.edit(f"**- التثبيت وصل لـ({trys2[0]}) من المحاولات**")
     elif "off" in isauto:
-        await event.edit("- التثبيت بالاصل لا يعمل .")
+        await event.edit("**- لا توجد عمليـة تثبيث جاريـه حاليـاً ؟!**")
     else:
         await event.edit("-لقد حدث خطأ ما وتوقف الامر لديك")
+
+
+@zedub.zed_cmd(pattern="حاله الصيد")
+async def _(event):
+    if "on" in isclaim:
+        await event.edit(f"**- الصيد وصل لـ({trys[0]}) من المحـاولات**")
+    elif "off" in isclaim:
+        await event.edit("**- لا توجد عمليـة صيد جاريـه حاليـاً ؟!**")
+    else:
+        await event.edit("**- لقد حدث خطأ ما وتوقف الامر لديك**")
+
+
+@zedub.zed_cmd(pattern="حاله التثبيت")
+async def _(event):
+    if "on" in isauto:
+        await event.edit(f"**- التثبيت وصل لـ({trys2[0]}) من المحاولات**")
+    elif "off" in isauto:
+        await event.edit("**- لا توجد عمليـة تثبيث جاريـه حاليـاً ؟!**")
+    else:
+        await event.edit("-لقد حدث خطأ ما وتوقف الامر لديك")
+
+
+@zedub.zed_cmd(pattern="ايقاف الصيد")
+async def _(event):
+    if "on" in isclaim:
+        isclaim.clear()
+        isclaim.append("off")
+        return await event.edit("**- تم إيقـاف عمليـة الصيـد .. بنجـاح ✓**")
+    elif "off" in isclaim:
+        return await event.edit("**- لا توجد عمليـة صيد جاريـه حاليـاً ؟!**")
+    else:
+        return await event.edit("**- لقد حدث خطأ ما وتوقف الامر لديك**")
+
+
+@zedub.zed_cmd(pattern="ايقاف التثبيت")
+async def _(event):
+    if "on" in isauto:
+        isauto.clear()
+        isauto.append("off")
+        return await event.edit("**- تم إيقـاف عمليـة التثبيت .. بنجـاح ✓**")
+    elif "off" in isauto:
+        return await event.edit("**- لا توجد عمليـة تثبيث جاريـه حاليـاً ؟!**")
+    else:
+        return await event.edit("**-لقد حدث خطأ ما وتوقف الامر لديك**")
