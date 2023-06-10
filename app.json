@@ -1,0 +1,82 @@
+{
+  "name": "𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼",
+  "description": "سوࢪس حيــاه افضل سوࢪ تيليثون ليبي",
+  "logo": "https://telegra.ph/file/89e5316364eeb1e17e554.jpg",
+  "keywords": [
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/jgk99gto/Caliph-New-",
+  "website": "#TODO",
+  "success_url": "#TODO",
+  "env": {
+    "ALIVE_NAME": {
+      "description": "ضـع هـنا اسـم الـتلجرام الخـاص بـك",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "ضـع هـنا الايبي ايـدي", 
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "ضـع هـنا الايبي هـاش",
+      "value": ""
+    },
+    "ENV": {
+      "description": "لا تغير هـذه القيمه",
+      "value": "ANYTHING"
+    },
+    "COMMAND_HAND_LER": {
+      "description": "لا تغير هـذه القيمه",
+      "value": "."
+    },
+    "STRING_SESSION": {
+      "description": "ضـع هنا كود بايروجرام او تيرمكس الخاص بك",
+      "value": ""
+    },
+    "TG_BOT_TOKEN": {
+      "description": "ضـع هـنا تـوكـن بـوتـك",
+      "value": ""
+    },
+    "HEROKU_API_KEY": {
+      "description": "ضـع هـنا الايبي كي الـخاص بحساب هيروكو من هذا الرابط https://dashboard.heroku.com/account",
+      "value": "",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "اسـم التطبيق اول شي كتبته",
+      "value": "",
+      "required": false
+    },
+    "TZ": {
+      "description": "المنطقه الزمنيه اتركه كما هي",
+      "value": "Asia/Baghdad",
+      "required": false
+    }
+  },
+  "addons": [{
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "12"
+    }
+  }],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
+  },{
+    "url": "https://github.com/riganf/heroku-buildpack-p7zip"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+  },{
+    "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+  },{
+    "url": "https://github.com/rahulps1000/heroku-buildpack-nodejs"
+  },{
+    "url": "heroku/python"
+  }],
+  "stack": "heroku-22"
+}
