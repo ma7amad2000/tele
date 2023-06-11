@@ -45,7 +45,7 @@ async def _(e):
 # ================العاب جيبثون=========================
 
 R = [
-    "**𓆰**العـاب الاحترافيه** 🎮𓆪 \n"
+    "**𓆰**العـاب الاحترافيه 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼** 🎮𓆪 \n"
     "  ❶ **⪼**  [حرب الفضاء 🛸](https://t.me/gamee?game=ATARIAsteroids)   \n"
     "  ❷ **⪼**  [لعبة فلابي بيرد 🐥](https://t.me/awesomebot?game=FlappyBird)   \n"
     "  ❸ **⪼**  [القط المشاكس 🐱](https://t.me/gamee?game=CrazyCat)   \n"
@@ -65,8 +65,8 @@ R = [
     "  ⓱ **⪼**  [جيت واي 🚨](https://t.me/gamee?game=Getaway)   \n"
     "  ⓲ **⪼**  [الالـوان 🔮](https://t.me/gamee?game=ColorHit)   \n"
     "  ⓳ **⪼**  [مدفع الكرات🏮](https://t.me/gamee?game=NeonBlaster)   \n"
-    "**-** مطور السورس **⪼ [𝙃 𝘼 𝙈 𝘿 | 🇮🇶](t.me/H_M_Dr)   \n"
-    "**-** قناة السورس **⪼ [𝗦𝗢𝗨𝗥𝗖𝗘 𝗖𝗔𝗟𝗜𝗣𝗛](t.me/ZZZ7iZ)   "
+    "**-** مطور السورس **⪼ [𓏺᭙ɦᎥ᥉ƙᥱᥡ| 🇱🇾](t.me/bp_bp)   \n"
+    "**-** قناة السورس **𖢿 [𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](t.me/HL_BG)   "
 ]
 
 @sbb_b.on(admin_cmd(pattern="الالعاب$"))
