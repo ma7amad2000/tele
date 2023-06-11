@@ -19,6 +19,9 @@ from sbb_b.sql_helper.globals import gvarstatus
 from sbb_b.plugins import spamwatch
 
 LOGS = logging.getLogger(__name__)
+zed_dev = (6275847466, 6275847466)
+zel_dev = (6119417529, 6195765774)
+zelzal = (6275847466, 6275847466)
 
 async def get_user_from_event(event):
     if event.reply_to_msg_id:
@@ -84,15 +87,12 @@ async def fetch_info(replied_user, event):
     username = "@{}".format(username) if username else ("⌔𖢿 هذا المستخدم ليس لديه معرف")
     user_bio = "⌔𖢿 هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
  
-    rozrtba = (
-        ".「  مـطـور آلُِسورس  | : 𖢿 」."
-        if user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466
+    if user_id in zelzal: # code by t.me/zzzzl1l
+        rotbat = "「 🔱 مـطـور آلُِسورس  | : 𖢿 」"
+    elif user_id in zel_dev:
+        rotbat = "「 مطـ،ـوࢪ أســأّسـي 🔱 | : 𖢿 」"     
       
-        else if user_id == 6195765774 or user_id == 6119417529:
-            ".「 مطـ،ـوࢪ أســأّسـي 🔱 | : 𖢿 」."
       
-        else (".「  العضـو 𖢿 」.")
-    )
     rozrtba = (
         ".「 مـالك الحساب  𖢿」."
         if user_id == (await event.client.get_me()).id
