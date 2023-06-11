@@ -99,7 +99,7 @@ async def fetch_info(replied_user, event):
         and user_id != 6275847466
         else rozrtba
     )     
-    caption = " ╮•⎚ مـعلومات الـشخص مـن بـوت الخليفه \n"
+    caption = " ╮•⎚ مـعلومات الـشخص مـن بـوت حيـــأه \n"
     caption += f"\n"
     caption += f"╽<b>- ❃الاسـم ⇜ </b> {full_name}\n"
     caption += f"╽<b>- ❃المـعـرف ⇜ </b> {username}\n"
