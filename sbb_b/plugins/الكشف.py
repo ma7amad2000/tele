@@ -83,14 +83,14 @@ async def fetch_info(replied_user, event):
     full_name = full_name or first_name
     username = "@{}".format(username) if username else ("⌔𖢿 هذا المستخدم ليس لديه معرف")
     user_bio = "⌔𖢿 هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
+ 
     rozrtba = (
         ".「  مـطـور آلُِسورس  | : 𖢿 」."
         if user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466
-        else (".「  العضـو 𓅫 」.")
-    )
-    rozrtba = (
-        ".「 مطـ،ـوࢪ أســأّسـي 🔱 | : 𖢿 」."
-        if user_id == 6119417529 or user_id == 6119417529 or user_id == 6119417529 or user_id == 6119417529 or user_id == 6119417529 or user_id == 6195765774
+      
+        else if user_id == 6195765774 or user_id == 6119417529:
+            ".「 مطـ،ـوࢪ أســأّسـي 🔱 | : 𖢿 」."
+      
         else (".「  العضـو 𖢿 」.")
     )
     rozrtba = (
