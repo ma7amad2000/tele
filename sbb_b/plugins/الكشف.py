@@ -54,7 +54,7 @@ async def fetch_info(replied_user, event):
     replied_user_profile_photos = await event.client(
         GetUserPhotosRequest(user_id=replied_user.id, offset=42, max_id=0, limit=80)
     )
-    replied_user_profile_photos_count = "⌔∮ هذا المستخدم لم يضع اي صورة"
+    replied_user_profile_photos_count = "⌔𖢿 هذا المستخدم لم يضع اي صورة"
     dc_id = "Can't get dc id"
     try:
         replied_user_profile_photos_count = replied_user_profile_photos.count
@@ -81,15 +81,20 @@ async def fetch_info(replied_user, event):
         else ("هذا المستخدم ليس لديه اسم اول")
     )
     full_name = full_name or first_name
-    username = "@{}".format(username) if username else ("⌔∮ هذا المستخدم ليس لديه معرف")
-    user_bio = "⌔∮ هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
+    username = "@{}".format(username) if username else ("⌔𖢿 هذا المستخدم ليس لديه معرف")
+    user_bio = "⌔𖢿 هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
     rozrtba = (
         ".「  مـطـور آلُِسورس  | : 𖢿 」."
         if user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466
         else (".「  العضـو 𓅫 」.")
     )
     rozrtba = (
-        ".「 مـالك الحساب  」."
+        ".「 مطـ،ـوࢪ أســأّسـي 🔱 | : 𖢿 」."
+        if user_id == 6119417529 or user_id == 6119417529 or user_id == 6119417529 or user_id == 6119417529 or user_id == 6119417529 or user_id == 6195765774
+        else (".「  العضـو 𖢿 」.")
+    )
+    rozrtba = (
+        ".「 مـالك الحساب  𖢿」."
         if user_id == (await event.client.get_me()).id
         and user_id != 6275847466
         and user_id != 6195765774
@@ -99,7 +104,7 @@ async def fetch_info(replied_user, event):
         and user_id != 6275847466
         else rozrtba
     )     
-    caption = " ╮•⎚ مـعلومات الـشخص مـن بـوت حيـــأه \n"
+    caption = " ╮•𖢿 مـعلومات الـشخص مـن بـوت حيـــأه \n"
     caption += f"\n"
     caption += f"╽<b>- ❃الاسـم ⇜ </b> {full_name}\n"
     caption += f"╽<b>- ❃المـعـرف ⇜ </b> {username}\n"
