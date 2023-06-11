@@ -638,14 +638,14 @@ async def pmpermit_on(event):
     if input_str == "تشغيل":
         if gvarstatus("pmpermit") is None:
             addgvar("pmpermit", "true")
-            await edit_delete(event, "⎉╎ تم تفعيل امر الحماية لحسابك بنجاح ✅")
+            await edit_delete(event, "𖢿╎ تم تفعيل امر الحماية لحسابك بنجاح ✅")
         else:
-            await edit_delete(event, "⎉╎ امر الحمايه بالفعل مُمكن لحسابك 🌿")
+            await edit_delete(event, "𖢿╎ امر الحمايه بالفعل مُمكن لحسابك 🌿")
     elif gvarstatus("pmpermit") is not None:
         delgvar("pmpermit")
-        await edit_delete(event, "⎉╎ تم تعطيل امر الحماية لحسابك بنجاح ✅")
+        await edit_delete(event, "𖢿╎ تم تعطيل امر الحماية لحسابك بنجاح ✅")
     else:
-        await edit_delete(event, "⎉╎ امر الحمايه بالفعل مُعطل لحسابك 🌿")
+        await edit_delete(event, "𖢿╎ امر الحمايه بالفعل مُعطل لحسابك 🌿")
 
 
 @sbb_b.ar_cmd(pattern="الحماية (تشغيل|تعطيل)$")  # ترجمه وكتابة فريق حيــاه
@@ -656,15 +656,15 @@ async def pmpermit_on(event):
             addgvar("pmmenu", "false")
             await edit_delete(
                 event,
-                "⎉╎ تم تعطيل امر الحماية لحسابك بنجاح ✅",
+                "𖢿╎ تم تعطيل امر الحماية لحسابك بنجاح ✅",
             )
         else:
-            await edit_delete(event, "⎉╎ امر الحمايه بالفعل مُعطل لحسابك 🌿")
+            await edit_delete(event, "𖢿╎ امر الحمايه بالفعل مُعطل لحسابك 🌿")
     elif gvarstatus("pmmenu") is not None:
         delgvar("pmmenu")
-        await edit_delete(event, "⎉╎ تم تفعيل امر الحماية لحسابك بنجاح ✅")
+        await edit_delete(event, "𖢿╎ تم تفعيل امر الحماية لحسابك بنجاح ✅")
     else:
-        await edit_delete(event, "⎉╎ امر الحمايه بالفعل مُمكن لحسابك 🌿")
+        await edit_delete(event, "𖢿╎ امر الحمايه بالفعل مُمكن لحسابك 🌿")
 
 
 @sbb_b.ar_cmd(pattern="(س|سماح)(?:\s|$)([\s\S]*)")
@@ -682,7 +682,7 @@ async def approve_p_m(event):
         if not user:
             return
     if not reason:
-        reason = "⎉╎ لـم يـذكـر 💭"
+        reason = "𖢿╎ لـم يـذكـر 💭"
     try:  # ترجمه وكتابة فريق حيــاه
         PM_WARNS = sql.get_collection("pmwarns").json
     except AttributeError:
@@ -707,7 +707,7 @@ async def approve_p_m(event):
             sqllist.rm_from_list("pmoptions", chat.id)
         await edit_delete(
             event,
-            f"-  [{user.first_name}](tg://user?id={user.id})\n⎉╎تـم الـسمـاح لـه مـن أرسـال الـرسـائـل ⚠️ \n⎉╎ الـسـبـب ❔ : {reason}",
+            f"-  [{user.first_name}](tg://user?id={user.id})\n𖢿╎تـم الـسمـاح لـه مـن أرسـال الـرسـائـل ⚠️ \n𖢿╎ الـسـبـب ❔ : {reason}",
         )
         try:
             PMMESSAGE_CACHE = sql.get_collection("pmmessagecache").json
@@ -728,7 +728,7 @@ async def approve_p_m(event):
     else:
         await edit_delete(
             event,
-            f"[{user.first_name}](tg://user?id={user.id}) \n⎉╎ هو بالفعل في قائمة السماح",
+            f"[{user.first_name}](tg://user?id={user.id}) \n𖢿╎ هو بالفعل في قائمة السماح",
         )
 
 
@@ -754,14 +754,14 @@ async def disapprove_p_m(event):
                 return
     if reason == "الكل":
         pmpermit_sql.disapprove_all()
-        return await edit_delete(event, "⎉╎ حسنا تم رفض الجميع بنجاح ")
+        return await edit_delete(event, "𖢿╎ حسنا تم رفض الجميع بنجاح ")
     if not reason:
-        reason = "⎉╎ لـم يـذكـر 💭"
+        reason = "𖢿╎ لـم يـذكـر 💭"
     if pmpermit_sql.is_approved(user.id):
         pmpermit_sql.disapprove(user.id)
         await edit_or_reply(
             event,
-            f"[{user.first_name}](tg://user?id={user.id})\n⎉╎تـم رفـضـه مـن أرسـال الـرسـائـل ⚠️\n⎉╎ الـسـبـب ❔ : {reason}",
+            f"[{user.first_name}](tg://user?id={user.id})\n𖢿╎تـم رفـضـه مـن أرسـال الـرسـائـل ⚠️\n𖢿╎ الـسـبـب ❔ : {reason}",
         )
     else:
         await edit_delete(
