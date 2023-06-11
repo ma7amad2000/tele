@@ -105,9 +105,9 @@ def gen_user(choice):
 async def _(event):
     await event.edit(
         """
-** هذه هي قائـمه الصيد الاصدار الثاني الخاصه بسورس الخليفه : **
+** هذه هي قائـمه الصيد الاصدار الثاني الخاصه بسورس حيــاه 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 : **
 
-ٴ— — — — — — — — — —
+ٴ— — — — — — 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼— — — —
 
 ** الانـواع : ( `ثلاثي` ) - ( `خماسي` ) - ( `سداسي` ) - ( `بوت` ) - ( `سباعي` )**
 
@@ -117,15 +117,15 @@ async def _(event):
 ** الامـر :  `تثبيت` + معرف **
 ** وظيفة الامـر : يقوم بالتثبيت على المعرف عندما يصبح متاح يأخذه **
 
- — — — — — — — — — — 
+ — — — — 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼— — — — — — 
 ** الامـر:   `.الحاله` **
 ** • لمعرفة عدد المحاولات للصيد **
 
- — — — — — — — — — — 
+ — — — — 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼— — — — — — 
 ** الامـر:  `.تثبيت` **
 ** • لمعرفة عدد المحاولات للسحب **
 
-@ZZZ7iZ  - **Source Al-Khalif **
+@HL_BG  - **𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼**
 
 """
     )
@@ -143,17 +143,17 @@ async def huntbot(event):
         if isav == True:
             try:
                 await sbb_b.send_message("@botfather", "/newbot")
-                await sbb_b.send_message("@botfather", "@ZZZ7iZ - @H_M_Dr 🐊")
+                await sbb_b.send_message("@botfather", "@HL_BG - @bp_bp 🐊")
                 await sbb_b.send_message("@botfather", username)
                 await event.client.send_file(
                     event.chat_id,
-                    "https://t.me/JZIXl/109",
-                    caption="🐊 Khalifa The best  🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف : ❲ @{} ❳\n- اضغط: ❲ {} ❳\n-  تم حفظ : ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
+                    "https://telegra.ph/file/89e5316364eeb1e17e554.jpg",
+                    caption="🐊 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 🐊\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف : ❲ @{} ❳\n- اضغط: ❲ {} ❳\n-  تم حفظ : ❲ bot ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @HL_BG - @bp_bp ❳ ".format(
                         username, trys3
                     ),
                 )
                 await event.client.send_message(
-                    "@H_M_Dr", f"-  انتـهى  : @{username} !\n- By : @ZZZ7iZ - @H_M_Dr !"
+                    "@bp_bp", f"-  انتـهى  : @{username} !\n- By : @HL_BG - @bp_bp !"
                 )
                 botmod = False
                 break
@@ -194,8 +194,8 @@ async def hunterusername(event):
     try:
         ch = await sbb_b(
             functions.channels.CreateChannelRequest(
-                title="- صـيد الخليفه ",
-                about="تم انشاء هذه القناة لصيد المعرفات بواسطة : - @ZZZ7iZ ",
+                title="- صـيد حيــاه 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 ",
+                about="تم انشاء هذه القناة لصيد المعرفات بواسطة : - @HL_BG ",
             )
         )
         ch = ch.updates[1].channel_id
@@ -223,20 +223,20 @@ async def hunterusername(event):
                 )
                 await event.client.send_file(
                     event.chat_id,
-                    "https://t.me/JZIXl/109",
-                    caption="🏆 Khalifa The best 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف : ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
+                    "https://telegra.ph/file/89e5316364eeb1e17e554.jpg",
+                    caption="🏆 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف : ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @HL_BG - @bp_bp ❳ ".format(
                         username, trys, choice
                     ),
                 )
                 await event.client.send_file(
                     ch,
-                    "https://t.me/JZIXl/109",
-                    caption="🏆 Khalifa The best 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
+                    "https://telegra.ph/file/89e5316364eeb1e17e554.jpg",
+                    caption="🏆 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Type: {}\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @HL_BG - @bp_bp ❳ ".format(
                         username, trys, choice
                     ),
                 )
                 await event.client.send_message(
-                    "@H_M_Dr", f"-  انتـهى  : @{username} !\n- By : @ZZZ7iZ - @H_M_Dr !"
+                    "@bp_bp", f"-  انتـهى  : @{username} !\n- By : @HL_BG - @bp_bp !"
                 )
                 sedmod = False
                 break
@@ -282,8 +282,8 @@ async def _(event):
         try:
             ch = await sbb_b(
                 functions.channels.CreateChannelRequest(
-                    title="- صـيد الخليفه",
-                    about="- تم انشاء هذه القناة لصيد المعرفات بواسطة @ZZZ7iZ ",
+                    title="- صـيد حيــاه 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼",
+                    about="- تم انشاء هذه القناة لصيد المعرفات بواسطة @HL_BG ",
                 )
             )
             ch = ch.updates[1].channel_id
@@ -308,21 +308,21 @@ async def _(event):
                 )
                 await event.client.send_file(
                     ch,
-                    "https://t.me/JZIXl/109",
-                    caption="🏆 Khalifa The best 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف : ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
+                    "https://telegra.ph/file/89e5316364eeb1e17e554.jpg",
+                    caption="🏆 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n-  المعرف : ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @HL_BG - @bp_bp ❳ ".format(
                         username, trys2
                     ),
                 )
                 await event.client.send_file(
                     event.chat_id,
-                    "https://t.me/JZIXl/109",
-                    caption="🏆 Khalifa The best 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n- * المعرف **: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @ZZZ7iZ - @H_M_Dr ❳ ".format(
+                    "https://telegra.ph/file/89e5316364eeb1e17e554.jpg",
+                    caption="🏆 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 🏆\n- - - - - - - - - - - - - - - - - - - - - - - -\n- * المعرف **: ❲ @{} ❳\n- ClickS: ❲ {} ❳\n- Save: ❲ Chaneel ❳\n- - - - - - - - - - - - - - - - - - - - - - - -\nThE KiNgS ❲ @HL_BG - @bp_bp ❳ ".format(
                         username, trys2
                     ),
                 )
                 await event.client.send_message(
-                    "@H_M_Dr",
-                    f"- منتهي : @{username} !\n- By : @ZZZ7iZ - @H_M_Dr !\n-  سجل السحب  {trys2}",
+                    "@bp_bp",
+                    f"- منتهي : @{username} !\n- By : @HL_BG - @bp_bp !\n-  سجل السحب  {trys2}",
                 )
                 swapmod = False
                 break
