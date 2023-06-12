@@ -86,7 +86,7 @@ async def fetch_info(replied_user, event):
     username = "@{}".format(username) if username else ("⌔𖢿 هذا المستخدم ليس لديه معرف")
     user_bio = "⌔𖢿 هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
     if user_id in zelzal: 
-        rotbat = "「 🔱 مبــࢪمـج آلُِسورس  | : 𖢿 」" 
+        rotbat = "「 👑 مبــࢪمـج آلُِسورس  | : 𖢿 」" 
     elif user_id in zel_dev:
         rotbat = "「🔱  مطـ،ـوࢪ أســأّسـي  | : 𖢿" 
     elif user_id == (await event.client.get_me()).id and user_id not in zed_dev:
@@ -95,7 +95,6 @@ async def fetch_info(replied_user, event):
         rotbat = "⌁ العضـو | : 𖢿"
     caption = " 𖢿╮مـعلومات الـشخص مـن بـوت حيــاه \n"
     caption += f"\n"
-    caption = f"<b> {ZED_TEXT} </b>\n"
     caption += f"ٴ<b>{ZEDF}</b>\n"
     caption += f"<b>{ZEDM}الاسـم    ⇠ </b> "
     caption += f'<a href="tg://user?id={user_id}">{full_name}</a>'
