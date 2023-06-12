@@ -93,7 +93,7 @@ async def fetch_info(replied_user, event):
         rotbat = "⌁ مـالك الحساب | : 𖢿" 
     else:
         rotbat = "⌁ العضـو | : 𖢿"
-    caption = " 𖢿╮مـعلومات الـشخص مـن بـوت حيــاه \n"
+    caption = "مـعلومات الـشخص مـن بـوت حيــاه 𖢿╮ \n"
     caption += f"\n"
     caption += f"<b>الاسـم    ⇠ </b> "
     caption += f'<a href="tg://user?id={user_id}">{full_name}</a>'
