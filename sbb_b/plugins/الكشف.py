@@ -95,19 +95,17 @@ async def fetch_info(replied_user, event):
         rotbat = "⌁ العضـو | : 𖢿"
     caption = " 𖢿╮مـعلومات الـشخص مـن بـوت حيــاه \n"
     caption += f"\n"
-    caption += f"ٴ<b>{ZEDF}</b>\n"
-    caption += f"<b>{ZEDM}الاسـم    ⇠ </b> "
+    caption += f"<b>الاسـم    ⇠ </b> "
     caption += f'<a href="tg://user?id={user_id}">{full_name}</a>'
-    caption += f"\n<b>{ZEDM}المعـرف  ⇠  {username}</b>"
-    caption += f"\n<b>{ZEDM}الايـدي   ⇠ </b> <code>{user_id}</code>\n"
-    caption += f"<b>{ZEDM}الرتبـــه   ⇠ {rotbat} </b>\n"
-    if zilzal == True or user_id in zelzal: # code by t.me/zzzzl1l
-       caption += f"<b>{ZEDM}الحسـاب ⇠  بـريميـوم 🌟</b>\n"
-    caption += f"<b>{ZEDM}الصـور    ⇠ </b> {replied_user_profile_photos_count}\n"
-    if user_id != (await event.client.get_me()).id: # code by t.me/zzzzl1l
-       caption += f"<b>{ZEDM}الـمجموعات المشتـركة ⇠ </b> {common_chat} \n"
-    caption += f"<b>{ZEDM}البايـو     ⇠  {user_bio}</b> \n"
-    caption += f"ٴ<b>{ZEDF}</b>"
+    caption += f"\n<b>المعـرف  ⇠  {username}</b>"
+    caption += f"\n<b>الايـدي   ⇠ </b> <code>{user_id}</code>\n"
+    caption += f"<b>الرتبـــه   ⇠ {rotbat} </b>\n"
+    if zilzal == True or user_id in zelzal:
+       caption += f"<b>الحسـاب ⇠  بـريميـوم 🌟</b>\n"
+    caption += f"<b>الصـور    ⇠ </b> {replied_user_profile_photos_count}\n"
+    if user_id != (await event.client.get_me()).id:
+       caption += f"<b>الـمجموعات المشتـركة ⇠ </b> {common_chat} \n"
+    caption += f"<b>البايـو     ⇠  {user_bio}</b> \n"
     return photo, caption
 
 @sbb_b.ar_cmd(pattern="ايدي(?: |$)(.*)")
