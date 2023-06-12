@@ -54,9 +54,9 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(JoinChannelRequest("HL_BG"))
-        await sbb_b(JoinChannelRequest("HL_BG"))
-        await sbb_b(JoinChannelRequest("HL_BG"))
+        await sbb_b(JoinChannelRequest("ZZZ7iZ"))
+        await sbb_b(JoinChannelRequest("ZZZ7iZ"))
+        await sbb_b(JoinChannelRequest("ZZZ7iZ"))
     except BaseException:
         pass
 
@@ -93,9 +93,9 @@ async def startupmessage():
         if BOTLOG:
             Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/89e5316364eeb1e17e554.jpg",
-                caption=" بــوت حيــاه يـعـمـل بـنـجـاح  **\n\n** ارسل `.الاوامر` لرؤية اوامر السورس**\n\n** قـنـاة سـورس حياه @HL_BG",
-                buttons=[(Button.url(" 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 ", "https://t.me/HL_BG"),)],
+                "https://graph.org/file/f3656e866e28b7c13bb9b.jpg",
+                caption=" بــوت الـخلـيفـه يـعـمـل بـنـجـاح  **\n\n** ارسل `.الاوامر` لرؤية اوامر السورس**\n\n** قـنـاة سـورس حياه @ZZZ7iZ",
+                buttons=[(Button.url(" ѕᴏᴜʀᴄᴇ ᴄᴀʟɪᴘʜ ", "https://t.me/ZZZ7iZ"),)],
             )
     except Exception as e:
         LOGS.error(e)
