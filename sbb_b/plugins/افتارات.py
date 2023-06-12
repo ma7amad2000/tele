@@ -37,7 +37,8 @@ async def _(event):
         await event.client.send_file(
             event.chat_id,
             file=random.choice(ZTHONR),
-            caption=f"**🎆┊حـالات واتـس قصيـرة 🧸♥️**\n\n[𖢿𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)",
+            caption=f"**🎆┊حـالات واتـس قصيـرة 𖢿
+**\n\n[𖢿𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)",
         )
         await zzevent.delete()
     except Exception:

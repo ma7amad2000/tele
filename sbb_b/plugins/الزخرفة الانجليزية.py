@@ -9,21 +9,25 @@ from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 async def zakrafaon(event):
     if not gvarstatus("enzakrafa"):
         addgvar("enzakrafa", "on")
-        await edit_delete(event, "𖢿 **تم تفعيل الزخرفة الانجليزية بنجاح ✅**")
+        await edit_delete(event, "
+| : 𖢿 **تم تفعيل الزخرفة الانجليزية بنجاح ✅**")
         return
     if gvarstatus("enzakrafa"):
-        await edit_delete(event, "𖢿 **الزخرفة الانجليزية مفعلة بالفعل ✅**")
+        await edit_delete(event, "
+| : 𖢿 **الزخرفة الانجليزية مفعلة بالفعل ✅**")
         return
 
 
 @sbb_b.ar_cmd(pattern="تعطيل الزخرفة الانجليزية")
 async def zakrafaoff(event):
     if not gvarstatus("enzakrafa"):
-        await edit_delete(event, "𖢿 **الزخرفة الانجليزية غير مفعلة بالفعل ❌**")
+        await edit_delete(event, "
+| : 𖢿 **الزخرفة الانجليزية غير مفعلة بالفعل ❌**")
         return
     if gvarstatus("enzakrafa"):
         delgvar("enzakrafa")
-        await edit_delete(event, "𖢿 **تم تعطيل الزخرفة الانجليزية بنجاح ❌**")
+        await edit_delete(event, "
+| : 𖢿 **تم تعطيل الزخرفة الانجليزية بنجاح ❌**")
         return
 
 
