@@ -17,7 +17,9 @@ from sbb_b.core.managers import edit_or_reply, edit_delete
 from sbb_b.helpers import reply_id
 from sbb_b.sql_helper.globals import gvarstatus
 from sbb_b.plugins import spamwatch
-
+zed_dev = (6275847466, 6275847466)
+zel_dev = (6119417529, 6195765774)
+zelzal = (6275847466, 6275847466)
 LOGS = logging.getLogger(__name__)
 
 async def get_user_from_event(event):
@@ -54,7 +56,7 @@ async def fetch_info(replied_user, event):
     replied_user_profile_photos = await event.client(
         GetUserPhotosRequest(user_id=replied_user.id, offset=42, max_id=0, limit=80)
     )
-    replied_user_profile_photos_count = "⌔∮ هذا المستخدم لم يضع اي صورة"
+    replied_user_profile_photos_count = "⌔𖢿 هذا المستخدم لم يضع اي صورة"
     dc_id = "Can't get dc id"
     try:
         replied_user_profile_photos_count = replied_user_profile_photos.count
@@ -81,37 +83,32 @@ async def fetch_info(replied_user, event):
         else ("هذا المستخدم ليس لديه اسم اول")
     )
     full_name = full_name or first_name
-    username = "@{}".format(username) if username else ("⌔∮ هذا المستخدم ليس لديه معرف")
-    user_bio = "⌔∮ هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
-    rozrtba = (
-        ".「  مـطـور آلُِسورس  | : 𖢿 」."
-        if user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466 or user_id == 6275847466
-        else (".「  العضـو 𓅫 」.")
-    )
-    rozrtba = (
-        ".「 مـالك الحساب  」."
-        if user_id == (await event.client.get_me()).id
-        and user_id != 6275847466
-        and user_id != 6195765774
-        and user_id != 6119417529
-        and user_id != 6275847466
-        and user_id != 6275847466
-        and user_id != 6275847466
-        else rozrtba
-    )     
-    caption = " ╮•⎚ مـعلومات الـشخص مـن بـوت الخليفه \n"
+    username = "@{}".format(username) if username else ("⌔𖢿 هذا المستخدم ليس لديه معرف")
+    user_bio = "⌔𖢿 هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
+    if user_id in zelzal: 
+        rotbat = "「 🔱 مبــࢪمـج آلُِسورس  | : 𖢿 」" 
+    elif user_id in zel_dev:
+        rotbat = "「🔱  مطـ،ـوࢪ أســأّسـي  | : 𖢿" 
+    elif user_id == (await event.client.get_me()).id and user_id not in zed_dev:
+        rotbat = "⌁ مـالك الحساب | : 𖢿" 
+    else:
+        rotbat = "⌁ العضـو | : 𖢿"
+    caption = " 𖢿╮مـعلومات الـشخص مـن بـوت حيــاه \n"
     caption += f"\n"
-    caption += f"╽<b>- ❃الاسـم ⇜ </b> {full_name}\n"
-    caption += f"╽<b>- ❃المـعـرف ⇜ </b> {username}\n"
-    caption += f"╽<b>- ❃الايـدي  ⇜</b> <code>{user_id}</code>\n"
-    caption += f"╽<b>- ❃الـمجموعات المشتـركة ⇜</b> {common_chat}\n"
-    caption += f"╽<b>- عـدد ❃الصـورة ⇜</b> {replied_user_profile_photos_count}\n"
-    caption += f"╽<b>- ❃الرتبـة ⇜</b>{rozrtba}\n"
-    caption += f"╽<b>-️ ❃الـنبـذه ⇜</b> \n<code>{user_bio}</code>\n"
-    caption += f"╽<b>- رابط حسـابه ⇜</b> "
-    caption += f'<a href="tg://user?id={user_id}">{first_name}</a>\n'
-    caption += f"✛┈┉━｢ \n"
-    caption += f""
+    caption = f"<b> {ZED_TEXT} </b>\n"
+    caption += f"ٴ<b>{ZEDF}</b>\n"
+    caption += f"<b>{ZEDM}الاسـم    ⇠ </b> "
+    caption += f'<a href="tg://user?id={user_id}">{full_name}</a>'
+    caption += f"\n<b>{ZEDM}المعـرف  ⇠  {username}</b>"
+    caption += f"\n<b>{ZEDM}الايـدي   ⇠ </b> <code>{user_id}</code>\n"
+    caption += f"<b>{ZEDM}الرتبـــه   ⇠ {rotbat} </b>\n"
+    if zilzal == True or user_id in zelzal: # code by t.me/zzzzl1l
+    caption += f"<b>{ZEDM}الحسـاب ⇠  بـريميـوم 🌟</b>\n"
+    caption += f"<b>{ZEDM}الصـور    ⇠ </b> {replied_user_profile_photos_count}\n"
+    if user_id != (await event.client.get_me()).id: # code by t.me/zzzzl1l
+    caption += f"<b>{ZEDM}الـمجموعات المشتـركة ⇠ </b> {common_chat} \n"
+    caption += f"<b>{ZEDM}البايـو     ⇠  {user_bio}</b> \n"
+    caption += f"ٴ<b>{ZEDF}</b>"
     return photo, caption
 
 @sbb_b.ar_cmd(pattern="ايدي(?: |$)(.*)")
@@ -123,7 +120,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except AttributeError:
-        return await edit_or_reply(roz,  "**⌔∮ لم يتم العثور على معلومات لهذا المستخدم **")
+        return await edit_or_reply(roz,  "**⌔𖢿 لم يتم العثور على معلومات لهذا المستخدم **")
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
