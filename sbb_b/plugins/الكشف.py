@@ -17,11 +17,11 @@ from sbb_b.core.managers import edit_or_reply, edit_delete
 from sbb_b.helpers import reply_id
 from sbb_b.sql_helper.globals import gvarstatus
 from sbb_b.plugins import spamwatch
+
+LOGS = logging.getLogger(__name__)
 zed_dev = (6275847466, 6275847466)
 zel_dev = (6119417529, 6195765774)
 zelzal = (6275847466, 6275847466)
-LOGS = logging.getLogger(__name__)
-
 async def get_user_from_event(event):
     if event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
