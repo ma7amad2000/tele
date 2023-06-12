@@ -6,9 +6,9 @@
 # <https://www.github.com/Zed-Thon/ZelZal/blob/main/LICENSE/>.
 
 """
-sbb_b - ZelZal
+sbb_b - HAYA
 - كتـابـة الاضـافـات
- تطويرالوسكي الليبي وبرمجة زلزال اليمني - @BP_PB
+ تطوير الوسكي الليبي وبرمجة زلزال اليمني - @BP_PB
 - حقـوق زدثـــون @HL_BG
 - تخمـط صيـر مطـور كفــوو واذكــر المصــدر
 """
@@ -37,7 +37,7 @@ from . import spamwatch
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
 # code by t.me/zzzzl1l
-ZED_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•⎚• مـعلومـات المسـتخـدم مـن بـوت حيــاه"
+ZED_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•𖢿• مـعلومـات المسـتخـدم مـن بـوت حيــاه"
 ZEDM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "𖢿"
 ZEDF = gvarstatus("CUSTOM_ALIVE_FONT") or "| : 𖢿"
 zed_dev = (6275847466, 6275847466)
@@ -125,7 +125,7 @@ async def fetch_info(replied_user, event):
     caption += f"\n<b>{ZEDM}ايديه  | : 𖢿</b> <code>{user_id}</code>\n"
     caption += f"<b>{ZEDM}رتبته | : 𖢿 {rotbat} </b>\n"
     if zilzal == True or user_id in zelzal: # code by t.me/zzzzl1l
-        caption += f"<b>{ZEDM}حسابه | : 𖢿 عــــادي 🌟</b>\n"
+        caption += f"<b>{ZEDM}حسابه | : 𖢿 بريــــميــوم 🌟</b>\n"
     caption += f"<b>{ZEDM}صوره  | : 𖢿</b> {replied_user_profile_photos_count}\n"
     if user_id != (await event.client.get_me()).id: # code by t.me/zzzzl1l
         caption += f"<b>{ZEDM}قروبات مشتركه | : 𖢿 </b> {common_chat} \n"
