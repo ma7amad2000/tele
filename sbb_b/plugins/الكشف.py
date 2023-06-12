@@ -121,7 +121,7 @@ async def fetch_info(replied_user, event):
     caption += f"ٴ<b>{ZEDF}</b>\n"
     caption += f"<b>{ZEDM}الاسـم    ⇠ </b> "
     caption += f'<a href="tg://user?id={user_id}">{full_name}</a>'
-     caption += f"\n<b>{ZEDM}معرفه| : 𖢿  {username}</b>"
+    caption += f"\n<b>{ZEDM}معرفه| : 𖢿  {username}</b>"
     caption += f"\n<b>{ZEDM}ايديه  | : 𖢿</b> <code>{user_id}</code>\n"
     caption += f"<b>{ZEDM}رتبته | : 𖢿 {rotbat} </b>\n"
     if zilzal == True or user_id in zelzal: # code by t.me/zzzzl1l
