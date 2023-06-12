@@ -18,7 +18,7 @@ from sbb_b.helpers import reply_id
 from sbb_b.sql_helper.globals import gvarstatus
 from sbb_b.plugins import spamwatch
 ZED_TEXT = gvarstatus("CUSTOM_ALIVE_TEXT") or "•𖢿• مـعلومـات المسـتخـدم مـن بـوت حيـــاه | : 𖢿"
-ZEDM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "✧ "
+ZEDM = gvarstatus("CUSTOM_ALIVE_EMOJI") or "𖢿 "
 ZEDF = gvarstatus("CUSTOM_ALIVE_FONT") or "𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼"
 zed_dev = (6275847466, 6275847466)
 zel_dev = (6119417529, 6195765774)
@@ -105,11 +105,11 @@ async def fetch_info(replied_user, event):
     caption += f"\n<b>{ZEDM}المعـرف  ⇠  {username}</b>"
     caption += f"\n<b>{ZEDM}الايـدي   ⇠ </b> <code>{user_id}</code>\n"
     caption += f"<b>{ZEDM}الرتبـــه   ⇠ {rotbat} </b>\n"
-    if user_id in zelzal: # code by t.me/zzzzl1l
-       caption += f"<b>{ZEDM}الحسـاب ⇠  بـريميـوم 🌟</b>\n"
+    if zilzal == True or user_id in zelzal: # code by t.me/zzzzl1l
+    caption += f"<b>{ZEDM}الحسـاب ⇠  بـريميـوم 🌟</b>\n"
     caption += f"<b>{ZEDM}الصـور    ⇠ </b> {replied_user_profile_photos_count}\n"
     if user_id != (await event.client.get_me()).id: # code by t.me/zzzzl1l
-       caption += f"<b>{ZEDM}الـمجموعات المشتـركة ⇠ </b> {common_chat} \n"
+    caption += f"<b>{ZEDM}الـمجموعات المشتـركة ⇠ </b> {common_chat} \n"
     caption += f"<b>{ZEDM}البايـو     ⇠  {user_bio}</b> \n"
     caption += f"ٴ<b>{ZEDF}</b>"
     return photo, caption
