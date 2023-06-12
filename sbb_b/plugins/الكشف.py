@@ -110,7 +110,7 @@ async def fetch_info(replied_user, event):
 # Copyright (C) 2021 Zed-Thon . All Rights Reserved
 # الـرتب الوهميـه & البريميـوم كتـابـة الكـود - زلــزال الـهيبــه @zzzzl1l
     if user_id in zelzal: # code by t.me/zzzzl1l
-        rotbat = "「 👑مـطـور آلُِسوࢪس | : 𖢿 」" 
+        rotbat = "「 👑مبــــرمـج آلُِسوࢪس | : 𖢿 」" 
     elif user_id in zel_dev:
         rotbat = "「🔱 مطـ،ـوࢪ أســأّسـي | :𖢿 」" 
     elif user_id == (await event.client.get_me()).id and user_id not in zed_dev:
