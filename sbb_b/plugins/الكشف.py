@@ -56,7 +56,7 @@ async def fetch_info(replied_user, event):
     replied_user_profile_photos = await event.client(
         GetUserPhotosRequest(user_id=replied_user.id, offset=42, max_id=0, limit=80)
     )
-    replied_user_profile_photos_count = "⌔𖢿 هذا المستخدم لم يضع اي صورة"
+    replied_user_profile_photos_count = "⌔𖢿| : هذا المستخدم لم يضع اي صورة"
     dc_id = "Can't get dc id"
     try:
         replied_user_profile_photos_count = replied_user_profile_photos.count
@@ -80,32 +80,32 @@ async def fetch_info(replied_user, event):
     first_name = (
         first_name.replace("\u2060", "")
         if first_name
-        else ("هذا المستخدم ليس لديه اسم اول")
+        else ("𖢿| :مــا عنـدش اسـم ⭐")
     )
     full_name = full_name or first_name
-    username = "@{}".format(username) if username else ("⌔𖢿 هذا المستخدم ليس لديه معرف")
-    user_bio = "⌔𖢿 هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
-    if user_id in zelzal: 
-        rotbat = "「 👑 مبــࢪمـج آلُِسورس  | : 𖢿 」" 
+    username = "@{}".format(username) if username else ("⌔𖢿| : هذا المستخدم ليس لديه معرف")
+    user_bio = "𖢿| :مــاعنـدش بــايـو ⭐" if not user_bio else user_bio
+        if user_id in zelzal: 
+        rozrtba = "「 🔱 مبــࢪمـج آلُِسورس  | : 𖢿 」" 
     elif user_id in zel_dev:
-        rotbat = "「🔱  مطـ،ـوࢪ أســأّسـي  | : 𖢿" 
+        rozrtba = "「🔱  مطـ،ـوࢪ أســأّسـي  | : 𖢿" 
     elif user_id == (await event.client.get_me()).id and user_id not in zed_dev:
-        rotbat = "⌁ مـالك الحساب | : 𖢿" 
+        rozrtba = "⌁ مـالك الحساب | : 𖢿" 
     else:
-        rotbat = "⌁ العضـو | : 𖢿"
-    caption = "مـعلومات الـشخص مـن بـوت حيــاه 𖢿╮ \n"
+        rozrtba = "⌁ العضـو | : 𖢿"
+    
+    caption = " 𖢿╮• مـعلومات الـشخص مـن بـوت 𖢿| : حيــاه ⭐ \n"
     caption += f"\n"
-    caption += f"<b>الاسـم    ⇠ </b> "
-    caption += f'<a href="tg://user?id={user_id}">{full_name}</a>'
-    caption += f"\n<b>المعـرف  ⇠  {username}</b>"
-    caption += f"\n<b>الايـدي   ⇠ </b> <code>{user_id}</code>\n"
-    caption += f"<b>الرتبـــه   ⇠ {rotbat} </b>\n"
-    if zilzal == True or user_id in zelzal:
-       caption += f"<b>الحسـاب ⇠  بـريميـوم 🌟</b>\n"
-    caption += f"<b>الصـور    ⇠ </b> {replied_user_profile_photos_count}\n"
-    if user_id != (await event.client.get_me()).id:
-       caption += f"<b>الـمجموعات المشتـركة ⇠ </b> {common_chat} \n"
-    caption += f"<b>البايـو     ⇠  {user_bio}</b> \n"
+    caption += f"╽<b>- 𖢿| :الاسـم ⇜ </b> {full_name}\n"
+    caption += f"╽<b>- 𖢿| :المـعـرف ⇜ </b> {username}\n"
+    caption += f"╽<b>- 𖢿| :الايـدي  ⇜</b> <code>{user_id}</code>\n"
+    caption += f"╽<b>- 𖢿| :الـمجموعات المشتـركة ⇜</b> {common_chat}\n"
+    caption += f"╽<b>- 𖢿| :عــدد الصـوࢪ⇜</b> {replied_user_profile_photos_count}\n"
+    caption += f"╽<b>- 𖢿| :الرتبـة ⇜</b>{rozrtba}\n"
+    caption += f"╽<b>-️ 𖢿| :الـنبـذه ⇜</b> \n<code>{user_bio}</code>\n"
+    caption += f"╽<b>- رابط حسـابه ⇜</b> "
+    caption += f'<a href="tg://user?id={user_id}">{first_name}</a>\n'
+    caption += f""
     return photo, caption
 
 @sbb_b.ar_cmd(pattern="ايدي(?: |$)(.*)")
@@ -117,7 +117,7 @@ async def who(event):
     try:
         photo, caption = await fetch_info(replied_user, event)
     except AttributeError:
-        return await edit_or_reply(roz,  "**⌔𖢿 لم يتم العثور على معلومات لهذا المستخدم **")
+        return await edit_or_reply(roz,  "**⌔𖢿| : لم يتم العثور على معلومات لهذا المستخدم **")
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = None
