@@ -53,7 +53,7 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"**▾∮ مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧ• 𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 •ⵧⵧⵧⵧⵧ⍣**\n[𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)\n\n"
+    text = f"**▾𖢿 مرحبا عزيزي {mention}**\n**▾اليكَ قائمة بازرار مضمنة لاوامر ↫**⍣ⵧⵧⵧⵧⵧ• 𓏺𝙒𝙃𝙄𝙎𝙆𝙀𝙔 •ⵧⵧⵧⵧⵧ⍣**\n[𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)\n\n"
     buttons = [
         (Button.inline("معلومات الملفات 🗂", data="check"),),
         (
@@ -422,7 +422,7 @@ async def inline_handler(event):
             _result = main_menu()
             result = builder.article(
                 title="sbb_b Help™",
-                description="**▾∮ قائمة التعليمات الخاصة ب حيــاه **",
+                description="**▾𖢿 قائمة التعليمات الخاصة ب الخليفه **",
                 text=_result[0],
                 buttons=_result[1],
                 link_preview=False,
@@ -480,8 +480,8 @@ async def inline_handler(event):
                 )
             else:
                 result = builder.article(
-                    title="**▾∮ غير موجود ✘**",
-                    text=f"**▾∮ لا يوجد نتائج لــ **`{str_y[1]}` ✘",
+                    title="**▾𖢿 غير موجود ✘**",
+                    text=f"**▾𖢿 لا يوجد نتائج لــ **`{str_y[1]}` ✘",
                     description="غير صالحة",
                 )
             try:
@@ -490,8 +490,8 @@ async def inline_handler(event):
                 await event.answer(
                     [
                         builder.article(
-                            title="**▾∮ غير موجود ✘**",
-                            text=f"**▾∮ لا يوجد نتائج لــ **`{str_y[1]}` ✘",
+                            title="**▾𖢿 غير موجود ✘**",
+                            text=f"**▾𖢿 لا يوجد نتائج لــ **`{str_y[1]}` ✘",
                             description="غير صالحة",
                         )
                     ]
@@ -561,7 +561,7 @@ async def inline_handler(event):
                 Button.url("قناة السورس", "t.me/HL_BG"),
                 Button.url(
                     "المطور",
-                    "t.me/bp_bp",
+                    "t.me/BP_BP",
                 ),
             )
         ]
@@ -570,14 +570,14 @@ async def inline_handler(event):
             url=CATLOGO, size=0, mime_type="image/jpeg", attributes=[]
         )
         text, msg_entities = await event.client._parse_message_text(
-            "لجعل حيــاه من نصيبك!", "md"
+            "لجعل الخليفه من نصيبك!", "md"
         )
         result = types.InputBotInlineResult(
             id=str(uuid4()),
             type="photo",
             title="[𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼](https://t.me/HL_BG)",
             description="لتنصيبه لك",
-            url="t.me/bp_bp",
+            url="t.me/HL_BG",
             thumb=photo,
             content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
