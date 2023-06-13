@@ -329,19 +329,24 @@ async def startgmute(event):
 
 @sbb_b.ar_cmd(pattern="الغاء كتم(?:\s|$)([\s\S]*)")
 async def endgmute(event):
-    if event.is_private:
-        await event.edit("**⌔∮ قد تحدث بعض الاخطاء و المشاكل**")
+  if event.is_private:
+        await event.edit("**⌔∮ ربما ستحدث بعض الاخطاء و المشاكل**")
         await asyncio.sleep(2)
         userid = event.chat_id
         reason = event.pattern_match.group(1)
+ 
     else:
         user, reason = await get_user_from_event(event)
         if not user:
             return
-        if user.id == sbb_b.uid:
-            return await edit_or_reply(event, "⌔∮ عذرا لا يمكنني كتم نفسي اصلا")
-        userid = user.id
+        if  user.id == 6275847466:
+            return await edit_delete(event, "**- لا يمكنك كتم مطور السورس الوسكي**")    
     try:
+        user = await event.client.get_entity(userid)
+    except Exception:
+        return await edit_or_reply(
+            event, "**⌔∮ لا يمكنني الحصول على معلومات من هذا المستخدم**"
+        )    try:
         user = await event.client.get_entity(userid)
     except Exception:
         return await edit_or_reply(
