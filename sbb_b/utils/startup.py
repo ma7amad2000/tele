@@ -93,9 +93,9 @@ async def startupmessage():
         if BOTLOG:
             Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://graph.org/file/f3656e866e28b7c13bb9b.jpg",
-                caption=" بــوت الـخلـيفـه يـعـمـل بـنـجـاح  **\n\n** ارسل `.الاوامر` لرؤية اوامر السورس**\n\n** قـنـاة سـورس حياه @ZZZ7iZ",
-                buttons=[(Button.url(" ѕᴏᴜʀᴄᴇ ᴄᴀʟɪᴘʜ ", "https://t.me/ZZZ7iZ"),)],
+                "https://telegra.ph/file/89e5316364eeb1e17e554.jpg",
+                caption=" بــوت حياه يـعـمـل بـنـجـاح  **\n\n** ارسل `.الاوامر` لرؤية اوامر السورس**\n\n** قـنـاة سـورس حياه @HL_BG",
+                buttons=[(Button.url("𓏺𝙎𝙊𝙐𝙍𝘾𝞝 𝙃𝘼𝙔𝘼 ", "https://t.me/HL_BG"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -128,7 +128,7 @@ async def startupmessage():
 
 async def add_bot_to_logger_group(chat_id):
     """
-    اضافة البوت للكروبات
+    اضافة البوت للقروبات
     """
     bot_details = await sbb_b.tgbot.get_me()
     try:
