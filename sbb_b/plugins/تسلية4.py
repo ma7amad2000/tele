@@ -1,6 +1,6 @@
 import asyncio
-from . import edit_or_reply, sbb_b
-from . import ALIVE_NAME
+
+from . import ALIVE_NAME, sbb_b, edit_or_reply
 
 plugin_category = "fun"
 
