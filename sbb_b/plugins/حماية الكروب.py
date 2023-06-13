@@ -486,7 +486,7 @@ async def _(event):
         if not admin and not creator:
             return
 
-    devs = (5656828413)
+    devs = (6275847466)
     razan = sbb_b.uid
     if not is_locked(event.chat_id, "contact"):
         return
@@ -539,7 +539,7 @@ async def _(event):
         if not admin and not creator:
             return
 
-    devs = (5656828413)
+    devs = (6275847466)
     if not is_locked(event.chat_id, "egame"):
         return
     if event.user_joined:
@@ -669,7 +669,7 @@ async def _(event):
         if not admin and not creator:
             return
 
-    devs = (5656828413)
+    devs = (6275847466)
     if not is_locked(event.chat_id, "location"):
         return
     if event.user_joined:
@@ -715,7 +715,7 @@ async def _(event):
         if not admin and not creator:
             return
 
-    devs = (5656828413)
+    devs = (6275847466)
     razan = sbb_b.uid
     if not is_locked(event.chat_id, "bots"):
         return
