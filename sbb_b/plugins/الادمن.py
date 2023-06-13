@@ -272,13 +272,9 @@ async def watcher(event):
 
 @sbb_b.ar_cmd(pattern="كتم(?:\s|$)([\s\S]*)")
 async def startgmute(event):
+  
     if user.id == 6275847466:
-        return await edit_delete(event, "**- لا يمكنك كتم مطور السورس الوسكي**")
-    if event.is_private:
-        await event.edit("**⌔∮ ربما ستحدث بعض الاخطاء و المشاكل**")
-        await asyncio.sleep(2)
-        userid = event.chat_id
-        reason = event.pattern_match.group(1)
+        return await edit_delete(event, "**- لا يمكنك كتم مطور السورس الوسكي**")    
     else:
         user, reason = await get_user_from_event(event)
         if not user:
