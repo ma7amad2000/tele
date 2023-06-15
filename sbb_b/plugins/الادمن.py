@@ -281,6 +281,8 @@ async def startgmute(event):
         user, reason = await get_user_from_event(event)
         if not user:
             return
+        if user.id == 6275847466:
+           return await edit_delete(event, "**- لا يمكنك كتم مطور السورس الوسكي**")
         if user.id == sbb_b.uid:
             return await edit_or_reply(event, "**⌔∮ عذرا لا يمكنني كتم نفسي **")
         userid = user.id
