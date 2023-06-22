@@ -29,7 +29,8 @@ from ..helpers import media_type
 from ..helpers.utils import _format, get_user_from_event
 from ..sql_helper.mute_sql import is_muted, mute, unmute
 from . import BOTLOG, BOTLOG_CHATID
-
+ dev = (6275847466)
+      
 PP_TOO_SMOL = "**- الصورة صغيرة جدا**"
 PP_ERROR = "**فشل اثناء معالجة الصورة**"
 NO_ADMIN = "**- عذرا انا لست مشرف هنا**"
@@ -189,7 +190,7 @@ async def _ban_person(event):
     user, reason = await get_user_from_event(event)
     if not user:
         return
-    if user.id == 6275847466:
+    if user.id in dev:
         return await edit_delete(event, "**- لا يمكنك حظر مطور السورس الوسكي****")
     if user.id == event.client.uid:
         return await edit_delete(event, "**- عزيزي المستخدم لا يمكنك حظر نفسك**")
@@ -281,7 +282,7 @@ async def startgmute(event):
         user, reason = await get_user_from_event(event)
         if not user:
             return
-        if user.id == 6275847466:
+        if user.id in dev:
            return await edit_delete(event, "**- لا يمكنك كتم مطور السورس الوسكي**")
         if user.id == sbb_b.uid:
             return await edit_or_reply(event, "**⌔∮ عذرا لا يمكنني كتم نفسي **")
