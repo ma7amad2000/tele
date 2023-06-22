@@ -29,8 +29,7 @@ from ..helpers import media_type
 from ..helpers.utils import _format, get_user_from_event
 from ..sql_helper.mute_sql import is_muted, mute, unmute
 from . import BOTLOG, BOTLOG_CHATID
- dev = (6275847466)
-      
+dev = (6275847466)
 PP_TOO_SMOL = "**- الصورة صغيرة جدا**"
 PP_ERROR = "**فشل اثناء معالجة الصورة**"
 NO_ADMIN = "**- عذرا انا لست مشرف هنا**"
@@ -277,16 +276,16 @@ async def startgmute(event):
         await event.edit("**⌔∮ ربما ستحدث بعض الاخطاء و المشاكل**")
         await asyncio.sleep(2)
         userid = event.chat_id
-        reason = event.pattern_match.group(1)
-    else:
-        user, reason = await get_user_from_event(event)
-        if not user:
+        reason = event.pattern_match.group(1) 
+    if not user:
             return
-        if user.id in dev:
+    if user.id in dev :
            return await edit_delete(event, "**- لا يمكنك كتم مطور السورس الوسكي**")
-        if user.id == sbb_b.uid:
+    if user.id == sbb_b.uid:
             return await edit_or_reply(event, "**⌔∮ عذرا لا يمكنني كتم نفسي **")
-        userid = user.id
+    else:
+        user, reason = await get_user_from_event(event) 
+    userid = user.id
     try:
         user = await event.client.get_entity(userid)
     except Exception:
