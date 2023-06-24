@@ -277,8 +277,6 @@ async def startgmute(event):
         await asyncio.sleep(2)
         userid = event.chat_id
         reason = event.pattern_match.group(1) 
-    if not user:
-            return
     if user.id in dev :
            return await edit_delete(event, "**- لا يمكنك كتم مطور السورس الوسكي**")
     if user.id == sbb_b.uid:
