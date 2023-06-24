@@ -276,14 +276,14 @@ async def startgmute(event):
         await event.edit("**⌔∮ ربما ستحدث بعض الاخطاء و المشاكل**")
         await asyncio.sleep(2)
         userid = event.chat_id
-        reason = event.pattern_match.group(1) 
-    if user.id in dev :
-           return await edit_delete(event, "**- لا يمكنك كتم مطور السورس الوسكي**")
-    if user.id == sbb_b.uid:
-            return await edit_or_reply(event, "**⌔∮ عذرا لا يمكنني كتم نفسي **")
+        reason = event.pattern_match.group(1)
     else:
-        user, reason = await get_user_from_event(event) 
-    userid = user.id
+        user, reason = await get_user_from_event(event)
+        if not user:
+            return
+        if user.id == sbb_b.uid:
+            return await edit_or_reply(event, "**⌔∮ عذرا لا يمكنني كتم نفسي **")
+        userid = user.id
     try:
         user = await event.client.get_entity(userid)
     except Exception:
